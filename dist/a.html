@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('div div').each(function (line) {
+                $(this).delay((line++) * 3750).fadeTo(2000, 1);
+            })
+                .promise()
+                .done(function () {
+                    $('div div')
+                        .delay(2000)
+                        .fadeTo(1000, 0)
+                        .promise()
+                        .done(function () {
+                            window.location.href = "/src/a2.html";
+                        })
+                })
+        });
+    </script>
+</head>
+
+<header>
+
+</header>
+
+<body class="justify-center lg:min-h-screen py-6 flex flex-col bg-neutral-100 dark:bg-neutral-900">
+    <div class="mx-auto">
+        <article class="prose prose-neutral dark:prose-invert mx-auto p-6 font-gambetta">
+            <div class="fade-in-box text-lg">
+                <div>“When I tell you, a cat must have three different names.</div>
+                <div>First of all, there’s the name that the family use daily,</div>
+                <div>Such as Peter, Augustus, Alonzo or James, […]</div>
+                <div>But I tell you, a cat needs a name that’s particular,</div>
+                <div>A name that’s peculiar, and more dignified…</div>
+                <div>Such as Bombalurina, or else Jellylorum —</div>
+                <div>Names that never belong to more than one cat…</div>
+                <div>But above and beyond there’s still one name left over,</div>
+                <div>And that is the name that you never will guess;</div>
+                <div>The name that no human research can discover -</div>
+                <div>But THE CAT HIMSELF KNOWS, and will never confess.”</div>
+                <br />
+                <div><em>- The Naming of Cats <br>
+                        T.S. Elliot</em></div>
+            </div>
+        </article>
+
+        <a id="next-button" href="/src/second.html"
+            class="button text-white bg-green-500 rounded-full text-lg button p-2 mx-6" style="opacity: 0;">></a>
+
+    </div>
+</body>
+
+</html>

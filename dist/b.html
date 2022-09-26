@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('div div').each(function (line) {
+                $(this).delay((line++) * 3750).fadeTo(2000, 1);
+            })
+                .promise()
+                .done(function () {
+                    $('div div')
+                        .delay(2000)
+                        .fadeTo(1000, 0)
+                        .promise()
+                        .done(function () {
+                            window.location.href = "/src/b2.html";
+                        })
+                })
+        });
+    </script>
+</head>
+
+<header>
+
+</header>
+
+<body class="justify-center min-h-screen py-6 flex flex-col bg-neutral-100 dark:bg-neutral-900">
+    <div class="mx-auto">
+        <article class="prose prose-neutral dark:prose-invert mx-auto p-6 font-gambetta">
+            <div class="fade-in-box text-lg">
+                <div>“It’s a saying they have,</div>
+                <div>that a man has a false heart in his mouth for the world to see,</div>
+                <div>another in his breast to show to his special friends and his family,</div>
+                <div>and the real one,</div>
+                <div>the true one,</div>
+                <div>the secret one,</div>
+                <div>which is never known to anyone except to himself alone,</div>
+                <div>hidden only God knows where.”</div>
+                <br />
+                <div>
+                    <em>
+                        - História da Igreja do Japão <br>
+                        Father João Rodrigues <br>
+                        via Shogun (1975), James Clavell
+                    </em>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('div div').each(function (line) {
+                $(this).delay((line++) * 3750).fadeTo(2000, 1);
+            })
+        });
+    </script>
+</head>
+
+<header>
+
+</header>
+
+<body class="justify-center min-h-screen py-6 flex flex-col bg-neutral-100 dark:bg-neutral-900">
+    <div class="mx-auto">
+        <article class="prose prose-neutral dark:prose-invert mx-auto p-6 font-gambetta">
+            <div class="fade-in-box text-lg">
+                <div>What would happen if one never knew one’s secret heart,</div>
+                <div>that innermost hidden one,</div>
+                <div>but an algorithm did?</div>
+                <br>
+                <div>Is it my heart, my face, my self,</div>
+                <div>if I knew nothing about it?</div>
+                <div>Or the algorithm’s?</div>
+                <br>
+                <div>Is this what we've become?</div>
+                <div>1s and 0s for some faceless algorithm to exploit?</div>
+                <br>
+                <div>Take back control of your innermost self</div>
+                <div><a href="https://apps.apple.com/app/apple-store/id1566083358?pt=122981363&ct=memo-b&mt=8"
+                        class="text-green-600 dark:text-green-500">It's easy...</a></div>
+            </div>
+        </article>
+
+
+    </div>
+</body>
+
+</html>
